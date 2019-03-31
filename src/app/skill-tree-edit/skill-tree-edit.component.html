@@ -1,0 +1,29 @@
+<body style="background-color: #96DEED;height:1000px">
+<div class="card2 card-1">
+<div class="button-container" >
+  <button id="skill" (click)="addSkill()" class="btn btn-info mx-auto" placeholder="Brief Self Intro">Add skill</button>
+</div>
+
+<div *ngIf="selectedObj">
+  <div>
+    <input [(ngModel)]="selectedObj.name"/>
+  </div>
+  <div>
+    <input [(ngModel)]="selectedObj.familiar" (input)="setWidth($event)"/>
+  </div>
+  <button id="remove" (click)="removeObject()">remove</button>
+</div>
+
+<h2>Skills bar</h2>
+<div class="skills-container">
+  <div  *ngFor="let obj of objs" class="skillbar clearfix" (click)="onSelect(obj)" (loaded)="onLoad($event,obj)" >
+    <div class="skillbar-title" [ngStyle]="{'background': getColor(obj)}"><span>{{obj.name}}</span></div>
+    <div class="skillbar-bar" [ngStyle]="{'background': getColor(obj),'width':getWidth(obj)}" ></div>
+    <div class="skill-bar-percent">{{obj.familiar}}%</div>
+    <span>{{onLoad(obj)}}</span>
+  </div>
+
+</div>
+</div>
+</body>
+

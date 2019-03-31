@@ -1,0 +1,19 @@
+.canvas-container{
+    background:lightgray;
+    width:800px;
+    height:600px;
+    overflow:hidden;
+    position: absolute;
+  
+  }
+  .object{
+    text-align:center;
+    position:absolute;
+    border:2px solid;
+  }
+  .selected{
+    border:2px solid pink;
+  }
+  mwlResizable {
+    box-sizing: border-box;
+  }

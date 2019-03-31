@@ -1,0 +1,31 @@
+<h2>Toolbox</h2>
+<div class="button-container" >
+  <button id="text" (click)="addText()">Text</button>
+  <button id="image" (click)="addImage()">Image</button>
+</div>
+<h2>Selected Obj</h2>
+<div *ngIf="selectedObj">
+  <div>
+  <input [(ngModel)]="selectedObj.content"/>
+  </div>
+  <button id="remove" (click)="removeObject()">remove</button>
+</div>
+
+<h2>Canvas</h2>
+<div class="canvas-container">
+  <div *ngFor="let obj of objs"
+       mwlResizable
+       [enableGhostResize]="true"
+       [resizeEdges]="{bottom: true, right: true, top: true, left: true}"
+       (resizeEnd)="onResizeEnd(obj,$event)"
+       (resizeStart)="onResizeStart(obj,$event)"
+       [class.selected]="obj === selectedObj" [ngStyle]="{'left': getLeft(obj),'top':getTop(obj),'height': getHeight(obj),'width':getWidth(obj)}"
+       class="object"   (click)="onSelect(obj)" (dragend)="onDragEnd(obj,$event)"  (dragstart)="onDragStart(obj,$event)">
+    <span  *ngIf="obj.type ==0 ; else elseBlock" style="user-select: all;"> {{obj.content}}</span>
+    <ng-template #elseBlock><img src="{{obj.content}}" style="
+    width: 100%;
+    height: 100%;
+"></ng-template>
+
+  </div>
+</div>

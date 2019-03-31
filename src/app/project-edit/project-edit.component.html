@@ -1,0 +1,67 @@
+<p>
+  Project Detail
+</p >
+<div class="mt-5 mb-2 mx-auto input-group" style="width:80%">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">  Project Title: </span>
+  </div>
+  <input [(ngModel)]='this.projects.name' class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div>
+  Collaborator: <input [(ngModel)]='this.projects.contributor' class="TitleDisplay">
+  Project Title: <input [(ngModel)]='this.projects.name' class="TitleDisplay" type="text">
+</div>
+
+<div>
+  Collaborator: <input [(ngModel)]='this.projects.contributor' class="TitleDisplay">
+  <div class="mt-5 mb-2 mx-auto input-group" style="width:50%; float:left;left:5%">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Project Title</span>
+    </div>
+    <input [(ngModel)]='this.projects.name' class="form-control" type="text" aria-describedby="basic-addon1">
+  </div>
+
+
+  <div class="mt-2 mb-2 mx-auto input-group" style="width:75%; float:left;left:5%;margin-top:10px">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Collaborator</span>
+    </div>
+    <input [(ngModel)]='this.projects.contributor' class="form-control" type="text" aria-describedby="basic-addon1">
+  </div>
+
+  <div>
+    <textarea class="AreaSize"> {{this.projects.description}} </textarea>
+  </div>
+
+  <div class="github">
+    Github Link: <input [(ngModel)]='this.projects.githubLink' class="TitleDisplay">
+  </div>
+
+  <div id="picDiv">
+    <p style="text-align: left">Screen Shots:</p >
+    < img src="{{this.projects.img}}" class="picDis">
+  </div>
+  Github Link: <input [(ngModel)]='this.projects.githubLink' class="TitleDisplay">
+  <div class="mt-2 mb-2 mx-auto input-group" style="width:75%;float:left;left:5%;margin-top:10px">
+    <div class="input-group-prepend">
+      <label class="input-group-text">Description</label>
+    </div>
+    <textarea class="form-control" id="self-description" rows="6">{{this.projects.description}}</textarea>
+  </div>
+
+
+  <div class="mt-2 mb-2 mx-auto input-group" style="width:50%; float:left;left:5%;margin-top:10px">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Github Link</span>
+    </div>
+    <input [(ngModel)]='this.projects.githubLink' class="form-control" type="text" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="mt-2 mb-2 mx-auto input-group" style="width:75%;float:left;left:5%">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">ScreenShots</span>
+    </div>
+    < img src="{{this.projects.img}}" class="picDis">
+  </div>
+</div>

@@ -1,0 +1,66 @@
+.TitleDisplay{
+  width: 80%;
+  height: 30px;
+  margin-top: 2%;
+}
+
+.ContentDisplay{
+  width: 80%;
+  height: 50px;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+#ContentTitle{
+  float: left;
+  margin-left: 8%;
+}
+
+#ImagePath{
+  float: left;
+  margin: 5% 20% 5% 10%;
+}
+
+.AreaSize{
+  width: 85%;
+  height: 40mm;
+  float: left;
+  margin-left: 8%;
+}
+
+.FileSize{
+  width: 85%;
+  height: 8mm;
+  float: left;
+  margin: 0 0 1% 8%;
+}
+
+.github{
+  width: 80%;
+  height: 50px;
+  padding-top: 5%;
+  margin-top: 10px;
+}
+
+#picDiv{
+  width: 90%;
+  height: 40%;
+  float: left;
+  margin-top: 7%;
+  margin-left: 6.5%;
+}
+
+.picDis{
+  width: 50%;
+  height: 10%;
+  float: left;
+}
+p{
+font-family: system-ui;;
+font-size: 50px;
+text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(56, 55, 55, 0.15);
+font-weight: 900;
+margin-left:5%;
+margin-top: 5%
+
+}

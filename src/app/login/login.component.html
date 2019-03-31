@@ -1,0 +1,10 @@
+
+<div>
+  <input [(ngModel)]="userName" type="text" name="username"  placeholder="username" autocomplete="off" />
+</div>
+<div>
+  <input [(ngModel)]="password" type="password"  name="password"  placeholder="password"  oncontextmenu="return false" onpaste="return false"/>
+</div>
+<div>{{warning}}</div>
+<div><button type="submit" (click)="checkIfUserValid()" >submit</button></div>
+<div><button type="sign up" (click)="adduser()" >sign up</button></div>
